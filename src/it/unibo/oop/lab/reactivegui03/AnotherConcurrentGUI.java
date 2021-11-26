@@ -46,11 +46,10 @@ public class AnotherConcurrentGUI extends JFrame {
         new Thread(() -> {
             try {
                 Thread.sleep(WAIT);
-                endOfGUI();
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             }
-
+            this.endOfGUI();
         }).start();
 
         up.addActionListener(new ActionListener() {
